@@ -1,4 +1,5 @@
 use RaceDay;
+INSERTING VALUES TO EVENT_ORGANISER TABLE
 
 INSERT INTO Event_Organiser
 (organiserID, name, email, phone, organisation_name, user_type, password_hash)
@@ -9,14 +10,15 @@ VALUES
 
 
 
-
+INSERTING VALUES TO PARTICIPANT TABLE
+  
 INSERT INTO Participant
 (participantID, name, email, phone, dateofbirth, gender, nationality, emergency_contact)
 VALUES
 (1, 'Sipho Nkosi', 'sipho@gmail.com', '0715550103', '1999-04-12', 'Male', 'South African', 'Nomsa Nkosi'),
 (2, 'Amahle Ndlovu', 'amahle@gmail.com', '0725550105', '2001-09-25', 'Female', 'South African', 'Sibusiso Ndlovu');
 
-
+INSERTING VALUES INTO EVENT TABLE
 
 INSERT INTO Event
 (eventID, organiserID, name, description, event_date, location, Distance_km, event_type, status)
@@ -27,7 +29,7 @@ VALUES
 
 (3, 2, 'Durban Coastal Cycle', 'A coastal cycling event', '2026-11-22', 'Durban', 40.00, 'Cycle', 'Upcoming');
 
-
+INSERTING VALUES INTO CATEGORY TABLE
 -- =========================================
 -- 3 CATEGORIES FOR EACH EVENT
 -- =========================================
@@ -51,7 +53,7 @@ VALUES
 (8, 3, 'Open Cycle', '18-39', 'Mixed', 40.00, 400),
 (9, 3, 'Veteran Cycle', '40+', 'Mixed', 40.00, 200);
 
-
+INSERTING VALUES INTO REGISTRATION TABLE
 INSERT INTO Registration
 (registrationID, participantID, eventID, categoryID, registrationdate, status, paymentstatus, entryfee)
 VALUES
@@ -65,13 +67,14 @@ VALUES
 (4, 2, 3, 8, '2026-09-03', 'Pending', 'Unpaid', 450);
 
 
-
+INSERTING VALUES INTO RESULTS TABLE 
+  
 INSERT INTO Result
 (resultID, registrationID, participantID, eventID, categoryID, finish_time, position, split_times)
 VALUES
 (1, 1, 1, 1, 2, '00:52:35', 1, '5km - 00:25:40; 10km - 00:52:35');
 
-
+INSERTING VALUES INTO ROUTE TABLE
 INSERT INTO Route
 (routeID, eventID, categoryID, elevation_gain, map_url, description)
 VALUES
