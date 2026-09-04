@@ -31,7 +31,7 @@ VALUES
 
 INSERTING VALUES INTO CATEGORY TABLE
 -- =========================================
--- 3 CATEGORIES FOR EACH EVENT
+-- 3 CATEGORIES FOR EACH EVENT              - a comment to specify and separate the events into 3 categories 
 -- =========================================
 
 INSERT INTO Category
