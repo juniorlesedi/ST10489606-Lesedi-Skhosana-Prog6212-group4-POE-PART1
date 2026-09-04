@@ -40,7 +40,7 @@ VALUES
 
 -- Johannesburg City Run
 (1, 1, 'Junior Run', 'Under 18', 'Mixed', 5.00, 200),
-(2, 1, 'Open Run', '18-39', 'Mixed', 10.00, 500),
+(2, 1, 'Open Run', '18-39', 'Mixed', 10.00, 500),         - category number 1 for ( Johannesburg City Run)
 (3, 1, 'Veteran Run', '40+', 'Mixed', 10.00, 250),
 
 -- Soweto Community Walk
@@ -76,7 +76,7 @@ VALUES
 
 INSERTING VALUES INTO ROUTE TABLE
 INSERT INTO Route
-(routeID, eventID, categoryID, elevation_gain, map_url, description)
+(routeID, eventID, categoryID, elevation_gain, map_url, description) - declaring which column  should be populated 
 VALUES
 (1, 1, 2, 145.50, 'https://jhb.com/johannesburg-route', '10km city route'),
 
