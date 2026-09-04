@@ -50,7 +50,7 @@ VALUES
 
 -- Durban Coastal Cycle
 (7, 3, 'Junior Cycle', 'Under 18', 'Mixed', 20.00, 100),
-(8, 3, 'Open Cycle', '18-39', 'Mixed', 40.00, 400),     
+(8, 3, 'Open Cycle', '18-39', 'Mixed', 40.00, 400),      - category number 3 for (Durban Coastal Cycle)
 (9, 3, 'Veteran Cycle', '40+', 'Mixed', 40.00, 200);
 
 INSERTING VALUES INTO REGISTRATION TABLE
