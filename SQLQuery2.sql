@@ -70,7 +70,7 @@ VALUES
 INSERTING VALUES INTO RESULTS TABLE 
   
 INSERT INTO Result
-(resultID, registrationID, participantID, eventID, categoryID, finish_time, position, split_times) - declaring which column should be populated 
+(resultID, registrationID, participantID, eventID, categoryID, finish_time, position, split_times) - declaring which column should be populated IN THE TABLE RESULT
 VALUES
 (1, 1, 1, 1, 2, '00:52:35', 1, '5km - 00:25:40; 10km - 00:52:35');
 
