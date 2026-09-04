@@ -1,4 +1,4 @@
-
+Event table
 CREATE TABLE Event_Organiser
 (
     organiserID INT PRIMARY KEY NOT NULL,
@@ -10,8 +10,8 @@ CREATE TABLE Event_Organiser
     password_hash VARCHAR(255) NOT NULL,
     created_at DATETIME2 NOT NULL DEFAULT SYSDATETIME()
 );
-GO
-
+Go
+event table
 
 CREATE TABLE Event
 (
@@ -29,8 +29,10 @@ CREATE TABLE Event
     FOREIGN KEY (organiserID)
     REFERENCES Event_Organiser(organiserID)
 );
-GO
+Go
 
+    declaration of participant table
+    
 CREATE TABLE Participant
 (
     participantID INT PRIMARY KEY NOT NULL,
@@ -43,10 +45,9 @@ CREATE TABLE Participant
     emergency_contact VARCHAR(100) NOT NULL,
     created_at DATETIME2 NOT NULL DEFAULT SYSDATETIME()
 );
-GO
+Go
 
-
-
+    Declararion of Category table
 CREATE TABLE Category
 (
     categoryID INT PRIMARY KEY NOT NULL,
@@ -60,9 +61,9 @@ CREATE TABLE Category
     FOREIGN KEY (eventID)
     REFERENCES Event(eventID)
 );
-GO
+Go
 
-
+declaration of registration table
 
 CREATE TABLE Registration
 (
@@ -85,9 +86,9 @@ CREATE TABLE Registration
     FOREIGN KEY (categoryID)
     REFERENCES Category(categoryID)
 );
-GO
-
-
+Go
+Declaration of result table
+    
 CREATE TABLE Result
 (
     resultID INT PRIMARY KEY NOT NULL,
@@ -112,10 +113,10 @@ CREATE TABLE Result
     FOREIGN KEY (categoryID)
     REFERENCES Category(categoryID)
 );
-GO
+Go
 
-
-
+declaration of route table
+    
 CREATE TABLE Route
 (
     routeID INT PRIMARY KEY NOT NULL,
@@ -132,9 +133,10 @@ CREATE TABLE Route
     FOREIGN KEY (categoryID)
     REFERENCES Category(categoryID)
 );
-GO
-
-
+Go
+    
+Declaration of Weatherinformation
+    
 CREATE TABLE WeatherInformation
 (
     weatherID INT PRIMARY KEY NOT NULL,
@@ -150,4 +152,4 @@ CREATE TABLE WeatherInformation
     FOREIGN KEY (eventID)
     REFERENCES Event(eventID)
 );
-GO
+Go
