@@ -21,7 +21,7 @@ VALUES
 INSERTING VALUES INTO EVENT TABLE
 
 INSERT INTO Event
-(eventID, organiserID, name, description, event_date, location, Distance_km, event_type, status)
+(eventID, organiserID, name, description, event_date, location, Distance_km, event_type, status) - declaring which columns to populate in the table
 VALUES
 (1, 1, 'Johannesburg City Run', 'A 10km city running event', '2026-10-18', 'Johannesburg', 10.00, 'Run', 'Upcoming'),
 
