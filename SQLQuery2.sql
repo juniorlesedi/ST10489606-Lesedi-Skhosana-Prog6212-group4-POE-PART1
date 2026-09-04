@@ -13,7 +13,7 @@ VALUES
 INSERTING VALUES TO PARTICIPANT TABLE
   
 INSERT INTO Participant
-(participantID, name, email, phone, dateofbirth, gender, nationality, emergency_contact) - declaring which column to populate in the table
+(participantID, name, email, phone, dateofbirth, gender, nationality, emergency_contact) - declaring which column to populate in the table Participant
 VALUES
 (1, 'Sipho Nkosi', 'sipho@gmail.com', '0715550103', '1999-04-12', 'Male', 'South African', 'Nomsa Nkosi'),
 (2, 'Amahle Ndlovu', 'amahle@gmail.com', '0725550105', '2001-09-25', 'Female', 'South African', 'Sibusiso Ndlovu');
