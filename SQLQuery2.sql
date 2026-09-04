@@ -76,7 +76,7 @@ VALUES
 
 INSERTING VALUES INTO ROUTE TABLE
 INSERT INTO Route
-(routeID, eventID, categoryID, elevation_gain, map_url, description) - declaring which column  should be populated 
+(routeID, eventID, categoryID, elevation_gain, map_url, description) - declaring which column  should be populated IN THE TABLE Route
 VALUES
 (1, 1, 2, 145.50, 'https://jhb.com/johannesburg-route', '10km city route'),
 
