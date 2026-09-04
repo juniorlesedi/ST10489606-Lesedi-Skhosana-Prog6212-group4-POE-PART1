@@ -2,7 +2,7 @@ use RaceDay;
 INSERTING VALUES TO EVENT_ORGANISER TABLE
 
 INSERT INTO Event_Organiser
-(organiserID, name, email, phone, organisation_name, user_type, password_hash) - declaring which values to change inside the table
+(organiserID, name, email, phone, organisation_name, user_type, password_hash) - declaring which column to populate inside the table
 VALUES 
 (1, 'Thabo Mokoena', 'thabo@gmail.com', '0825550101', 'RaceDay Gauteng', 'Organiser', 'hash123'),
 (2, 'Lerato Dlamini', 'lerato@gmail.com', '0835550102', 'RaceDay KZN', 'Organiser', 'hash456');
@@ -13,7 +13,7 @@ VALUES
 INSERTING VALUES TO PARTICIPANT TABLE
   
 INSERT INTO Participant
-(participantID, name, email, phone, dateofbirth, gender, nationality, emergency_contact)
+(participantID, name, email, phone, dateofbirth, gender, nationality, emergency_contact) - declaring which column to populate in the table
 VALUES
 (1, 'Sipho Nkosi', 'sipho@gmail.com', '0715550103', '1999-04-12', 'Male', 'South African', 'Nomsa Nkosi'),
 (2, 'Amahle Ndlovu', 'amahle@gmail.com', '0725550105', '2001-09-25', 'Female', 'South African', 'Sibusiso Ndlovu');
