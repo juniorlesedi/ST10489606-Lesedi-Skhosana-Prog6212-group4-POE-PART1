@@ -35,7 +35,7 @@ INSERTING VALUES INTO CATEGORY TABLE
 -- =========================================
 
 INSERT INTO Category
-(categoryID, eventID, name, agegroup, gender, distancekm, max_participants) - declaring which column to populate in the table 
+(categoryID, eventID, name, agegroup, gender, distancekm, max_participants) - declaring which column to populate in the table CATEGORY
 VALUES
 
 -- Johannesburg City Run
