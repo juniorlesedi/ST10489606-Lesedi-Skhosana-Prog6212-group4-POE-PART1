@@ -137,7 +137,7 @@ Go
     
 Declaration of Weatherinformation
     
-CREATE TABLE WeatherInformation
+CREATE TABLE WeatherInformation  - i dropped this table on my sql so it doesnt work no more 
 (
     weatherID INT PRIMARY KEY NOT NULL, primary key of the table
     eventID INT NOT NULL, - foreign key of the table
