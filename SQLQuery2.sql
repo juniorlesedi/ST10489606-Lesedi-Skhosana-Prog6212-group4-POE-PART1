@@ -2,7 +2,7 @@ use RaceDay;
 INSERTING VALUES TO EVENT_ORGANISER TABLE
 
 INSERT INTO Event_Organiser
-(organiserID, name, email, phone, organisation_name, user_type, password_hash) - declaring which column to populate inside the table
+(organiserID, name, email, phone, organisation_name, user_type, password_hash) - declaring which column to populate inside the table Event_Organiser
 VALUES 
 (1, 'Thabo Mokoena', 'thabo@gmail.com', '0825550101', 'RaceDay Gauteng', 'Organiser', 'hash123'),
 (2, 'Lerato Dlamini', 'lerato@gmail.com', '0835550102', 'RaceDay KZN', 'Organiser', 'hash456');
