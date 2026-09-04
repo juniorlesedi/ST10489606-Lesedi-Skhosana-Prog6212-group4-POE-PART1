@@ -45,12 +45,12 @@ VALUES
 
 -- Soweto Community Walk
 (4, 2, 'Junior Walk', 'Under 18', 'Mixed', 4.00, 150),
-(5, 2, 'Open Walk', '18-39', 'Mixed', 8.00, 300),
+(5, 2, 'Open Walk', '18-39', 'Mixed', 8.00, 300),        - category number 2 for (Soweto Community Walk)
 (6, 2, 'Veteran Walk', '40+', 'Mixed', 8.00, 150),
 
 -- Durban Coastal Cycle
 (7, 3, 'Junior Cycle', 'Under 18', 'Mixed', 20.00, 100),
-(8, 3, 'Open Cycle', '18-39', 'Mixed', 40.00, 400),
+(8, 3, 'Open Cycle', '18-39', 'Mixed', 40.00, 400),     
 (9, 3, 'Veteran Cycle', '40+', 'Mixed', 40.00, 200);
 
 INSERTING VALUES INTO REGISTRATION TABLE
