@@ -1,7 +1,7 @@
 Event table
 CREATE TABLE Event_Organiser
 (
-    organiserID INT PRIMARY KEY NOT NULL,
+    organiserID INT PRIMARY KEY NOT NULL,   -THIS IS A PRIMARY KEY OF THE TABLE
     name VARCHAR(50) NOT NULL,
     email VARCHAR(50) NOT NULL UNIQUE,
     phone VARCHAR(50) NOT NULL,
@@ -15,8 +15,8 @@ event table
 
 CREATE TABLE Event
 (
-    eventID INT PRIMARY KEY NOT NULL,
-    organiserID INT NOT NULL,
+    eventID INT PRIMARY KEY NOT NULL, - THIS IS THE PRIMARY KEY OF THE TABLE 
+    organiserID INT NOT NULL, -FOREIGN KEY OF THE TABLE
     name VARCHAR(50) NOT NULL,
     description VARCHAR(100) NOT NULL,
     event_date DATE NOT NULL,
@@ -27,7 +27,7 @@ CREATE TABLE Event
     created_at DATETIME2 NOT NULL DEFAULT SYSDATETIME(),
 
     FOREIGN KEY (organiserID)
-    REFERENCES Event_Organiser(organiserID)
+    REFERENCES Event_Organiser(organiserID) - REFERENCE OF THE FOREIGN KEY
 );
 Go
 
@@ -35,7 +35,7 @@ Go
     
 CREATE TABLE Participant
 (
-    participantID INT PRIMARY KEY NOT NULL,
+    participantID INT PRIMARY KEY NOT NULL,  -PRIMARY KEY OF THE TABLE
     name VARCHAR(50) NOT NULL,
     email VARCHAR(50) NOT NULL UNIQUE,
     phone VARCHAR(50) NOT NULL,
@@ -50,8 +50,8 @@ Go
     Declararion of Category table
 CREATE TABLE Category
 (
-    categoryID INT PRIMARY KEY NOT NULL,
-    eventID INT NOT NULL,
+    categoryID INT PRIMARY KEY NOT NULL, - PRIMARY KEY OF THE TABLE
+    eventID INT NOT NULL, - FOREIGN KEY OF THE TABLE
     name VARCHAR(50) NOT NULL,
     agegroup VARCHAR(50) NOT NULL,
     gender VARCHAR(10) NOT NULL,
@@ -59,7 +59,7 @@ CREATE TABLE Category
     max_participants INT NOT NULL,
 
     FOREIGN KEY (eventID)
-    REFERENCES Event(eventID)
+    REFERENCES Event(eventID) - REFERENCE OF THE FOREIGN KEY
 );
 Go
 
@@ -67,10 +67,10 @@ declaration of registration table
 
 CREATE TABLE Registration
 (
-    registrationID INT PRIMARY KEY NOT NULL,
-    participantID INT NOT NULL,
-    eventID INT NOT NULL,
-    categoryID INT NOT NULL,
+    registrationID INT PRIMARY KEY NOT NULL, - PRIMARY KEY OF THE TABLE 
+    participantID INT NOT NULL,- FOREIGN KEY NUMBER 1  OF THE TABLE 
+    eventID INT NOT NULL, - FOREIGN KEY NUMBER 2 OF THE TABLE
+    categoryID INT NOT NULL, - FOREIGN KEY NUMBER 3 OF THE TABLE 
     registrationdate DATE NOT NULL,
     status VARCHAR(50) NOT NULL,
     paymentstatus VARCHAR(20) NOT NULL,
@@ -78,40 +78,40 @@ CREATE TABLE Registration
     created_at DATETIME2 NOT NULL DEFAULT SYSDATETIME(),
 
     FOREIGN KEY (participantID)
-    REFERENCES Participant(participantID),
+    REFERENCES Participant(participantID), -REFERENCE OF FOREIGN KEY NUMBER 1
 
     FOREIGN KEY (eventID)
-    REFERENCES Event(eventID),
+    REFERENCES Event(eventID), - REFERENCE OF FOREIGN KEY NUMBER 2
 
     FOREIGN KEY (categoryID)
-    REFERENCES Category(categoryID)
+    REFERENCES Category(categoryID)- REFERENCE OF FOREIGN KEY NUMBER 3
 );
 Go
 Declaration of result table
     
 CREATE TABLE Result
 (
-    resultID INT PRIMARY KEY NOT NULL,
-    registrationID INT NOT NULL,
-    participantID INT NOT NULL,
-    eventID INT NOT NULL,
-    categoryID INT NOT NULL,
+    resultID INT PRIMARY KEY NOT NULL, - PRIMARY KEY OF THE TABLE
+    registrationID INT NOT NULL, - REFERENCE OF FOREIGN KEY NUMBER 1
+    participantID INT NOT NULL,- REFERENCE OF FOREIGN KEY NUMBER 2
+    eventID INT NOT NULL,- REFERENCE OF FOREIGN KEY NUMBER 3
+    categoryID INT NOT NULL,- REFERENCE OF FOREIGN KEY NUMBER 4 
     finish_time TIME NOT NULL,
     position INT NOT NULL,
     split_times VARCHAR(500) NOT NULL,
     created_at DATETIME2 NOT NULL DEFAULT SYSDATETIME(),
 
     FOREIGN KEY (registrationID)
-    REFERENCES Registration(registrationID),
+    REFERENCES Registration(registrationID), - REFERENCE OF FOREIGN KEY NUMBER 1
 
     FOREIGN KEY (participantID)
-    REFERENCES Participant(participantID),
+    REFERENCES Participant(participantID), - REFERENCE OF FOREIGN KEY NUMBER 2
 
     FOREIGN KEY (eventID)
-    REFERENCES Event(eventID),
+    REFERENCES Event(eventID), - REFERENCE OF FOREIGN KEY NUMBER 3
 
     FOREIGN KEY (categoryID)
-    REFERENCES Category(categoryID)
+    REFERENCES Category(categoryID) - REFERENCE OF FOREIGN KEY NUMBER 4
 );
 Go
 
@@ -139,8 +139,8 @@ Declaration of Weatherinformation
     
 CREATE TABLE WeatherInformation
 (
-    weatherID INT PRIMARY KEY NOT NULL,
-    eventID INT NOT NULL,
+    weatherID INT PRIMARY KEY NOT NULL, primary key of the table
+    eventID INT NOT NULL, - foreign key of the table
     date DATE NOT NULL,
     temperature DECIMAL(4,1) NOT NULL,
     weather_condition VARCHAR(50) NOT NULL,
@@ -150,6 +150,6 @@ CREATE TABLE WeatherInformation
     created_at DATETIME2 NOT NULL DEFAULT SYSDATETIME(),
 
     FOREIGN KEY (eventID)
-    REFERENCES Event(eventID)
+    REFERENCES Event(eventID) - reference of the foreign key
 );
 Go
